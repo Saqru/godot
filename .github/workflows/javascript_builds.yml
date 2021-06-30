@@ -4,7 +4,7 @@ on: [push, pull_request]
 # Global Settings
 env:
   GODOT_BASE_BRANCH: 3.x
-  SCONSFLAGS: verbose=yes warnings=all werror=yes debug_symbols=no
+  SCONSFLAGS: verbose=yes warnings=all werror=no debug_symbols=no
   EM_VERSION: 2.0.25
   EM_CACHE_FOLDER: "emsdk-cache"
 
