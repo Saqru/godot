@@ -18,16 +18,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: Editor and sanitizers (target=debug, tools=yes, use_asan=yes, use_ubsan=yes)
-            cache-name: linux-editor-sanitizers
+          - name: Editor
+            cache-name: linux-editor
             target: debug
             tools: true
-            sconsflags: use_asan=yes use_ubsan=yes
             test: false
-            bin: "./bin/godot.x11.tools.64s"
+            bin: "./bin/godot.x11.tools.64"
             build-mono: false
-            # Skip 2GiB artifact speeding up action.
-            artifact: false
+            artifact: true
 
     steps:
       - uses: actions/checkout@v2
